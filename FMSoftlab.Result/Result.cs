@@ -22,7 +22,7 @@ namespace FMSoftlab.Result
     {
         bool Success { get; set; }
         bool Failure { get; }
-        List<MessageItem> Messages { get; }
+        List<MessageItem> Messages { get; set; }
     }
 
     public interface IResultMessages : IResult
@@ -37,7 +37,7 @@ namespace FMSoftlab.Result
     {
         public bool Success { get; set; }
         public bool Failure { get { return !Success; } }
-        public List<MessageItem> Messages { get; }
+        public List<MessageItem> Messages { get; set; }
 
         public Result(bool success)
         {
